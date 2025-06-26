@@ -8,7 +8,7 @@ A simple and interactive Tic Tac Toe game built using HTML, CSS, and JavaScript.
 - Restart and new game functionality  
 
 ## Screenshots  
-![Game Board](http://127.0.0.1:3000/index.html)  
+![Game Board](Image.PNG)  
 _A screenshot of the Tic Tac Toe game in action._
 
 ## How to Play  
