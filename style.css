@@ -6,54 +6,59 @@
 
 body{
     background-color: #101820;
+    font-size: 20px;
+    text-align: center;
+}
+.title{
+
     color: #FF1493;
     text-shadow: 0 0 10px #00FFFF;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 2rem;
+    font-size: 5vw;
     font-style: oblique;
     padding-top: 10vh;
+    padding-bottom: 3rem;
 }
-.container{
+.container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 60vh;
 }
 
 .game {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(min-content, 100px));
+    gap:1.25rem;
+    place-items: center;
     justify-content: center;
-    gap: 2vmin;
-    max-width: 50vmin;
-    margin: auto;
+    margin-bottom: 2.5rem;
 }
 
 .box{
     width : 15vmin;
     height: 15vmin;
-    border-radius: 10px;
-    border: 2px solid rgb(82, 78, 78);
+    border-radius: 0.625rem;
+    border: 0.125rem solid rgb(82, 78, 78);
     background-color: #00BFFF;
     color: #944363;
     font-size: 4rem;
     font-weight: bold;
-    box-shadow: 0 0 5px 5px #096879;
+    box-shadow: 0 0 0.3125rem 0.3125rem #096879;
 }
 .box:hover{
     background-color: #00FFFF;
-    box-shadow: 0 0 10px 5px #FF4500;
+    box-shadow: 0 0 0.625rem 0.3125rem #FF4500;
 }
 .restart{
     height: 5vmin;
     width: 20vmin;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     background-color: #39FF14;
     color: #101820;
     font-size: 1.5rem;
     font-weight: bold;
     cursor: pointer;
+    
 }
 .restart:hover{
     background-color: #7FFF00;
@@ -62,6 +67,9 @@ body{
     font-size: 4rem;
     text-decoration: underline;
     animation: winner 1s ease-in-out infinite;
+    margin-top: 20vh;
+    color: #FF1493;
+    text-shadow: 0 0 10px #00FFFF;
   }
   
   @keyframes winner {
@@ -72,9 +80,9 @@ body{
     display: none;
 }
 .newGame{
-    height: 5vmin;
-    width: 20vmin;
-    border-radius: 10px;
+    height: 3.125rem;
+    width: 12.5rem;
+    border-radius: 0.625rem;
     background-color: #39FF14;
     color: #101820;
     font-size: 1.5rem;
@@ -82,9 +90,63 @@ body{
     cursor: pointer;
     margin-top: 2vmin;
     animation: winner 1s ease-in-out infinite;
+    margin-bottom: 70vh
 }
 .newGame:hover{
     animation: none;
     opacity: 1;
     background-color: #7FFF00;
-}    
+}  
+
+@media (min-width: 768px) and (max-width: 1023px) {
+   
+    .box {
+        width: 12vmin;
+        height: 12vmin;
+        font-size: 3rem;
+        
+    }
+
+    .restart, .newGame {
+        height: 6vmin;
+        width: 25vmin;
+        font-size: 1.2rem;
+        animation: none;
+    }
+
+    .winners {
+        font-size: 2.4rem;
+        margin-bottom:5vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .title{
+        font-size: 8vw;
+    }
+    .game{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+    .box{
+        width: 14vmin;
+        height: 14vmin;
+        font-size: 1.5rem;
+        gap: 
+    }
+    .restart{
+        width: 40vmin;
+        height: 8vmin;
+        font-size: 1rem;
+    }
+    .newGame{
+        width: 40vmin;
+        height: 8vmin;
+        font-size: 0.75rem;
+        animation: none;
+    }
+    .winners{
+        font-size: 1.5rem;
+        margin-bottom: 5vh;
+    }
+}

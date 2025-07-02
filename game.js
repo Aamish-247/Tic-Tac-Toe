@@ -78,6 +78,7 @@ const draw = ()=>{
     if(isDraw == true){
         winners.classList.add("winners");
         winners.innerText = "Sorry, Game Draw";
+        newGame.classList.remove("hide");
         winners.classList.remove("hide");
     }
 }
