@@ -5,7 +5,8 @@ A simple and interactive Tic Tac Toe game built using HTML, CSS, and JavaScript.
 - Modern dark theme with glowing effects  
 - Two-player mode  
 - Winner notification system  
-- Restart and new game functionality  
+- Restart and new game functionality
+- Responsive design for all devices  
 
 ## Screenshots  
 ![Game Board](images/Image.PNG)  
